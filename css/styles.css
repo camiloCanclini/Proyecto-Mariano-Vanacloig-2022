@@ -1,0 +1,8 @@
+:root{
+    --primary-color: #33F295;
+    --secundary-color: #43F5DD
+    --tertiary-color: #C5F233
+}
+body{
+    background-image: linear-gradient(to left top, #43f5dd, #2df5cf, #1ef5be, #22f4ab, #33f295); 
+}
