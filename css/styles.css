@@ -1,8 +1,97 @@
 :root{
     --primary-color: #33F295;
-    --secundary-color: #43F5DD
-    --tertiary-color: #C5F233
+    --secundary-color: #43F5DD;
+    --tertiary-color: #C5F233;
 }
 body{
     background-image: linear-gradient(to left top, #43f5dd, #2df5cf, #1ef5be, #22f4ab, #33f295); 
+    margin: 0;
+}
+header{
+    background-color: #fff;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    height: 10vh;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+#header_logo{
+    height: 100%;
+}
+#header_social-medias{
+    height: min-content;
+    min-width: 25vw;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-decoration: none;
+    font-size: 4vh;
+}
+#header_social-medias li{
+    height: 100%;
+    display: inline-block;
+}
+#header_social-medias a:visited{
+    color: black;
+}
+nav{
+    margin: 0;
+    padding: 0px 10px;
+    height: 5vh;
+    background-color: #C5F233;
+    font-size: 2.7vh;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: black;
+    position: sticky;
+    top: 0;
+}
+nav ul{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+nav li{
+    display: inline-block;
+    height: 80%;
+    padding: 0 10px;
+    width: calc(max-content + 10px);
+    display: flex;
+    align-items: center;
+    transition-property: background-color border-radius;
+    transition-duration: 1s;
+}
+nav li:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+nav a{
+    text-decoration: none;
+}
+nav a:visited{
+    color: black
+}
+main{
+    margin: 0;
+    padding: 0;
+}
+#main_presentation-img{
+    margin: 0;
+    background-image: url("../images/photos/presentation-page.jpg");
+    background-size: cover;
+    height: 83vh;
+}
+#main_presentation-text{
+    padding: 20px;
+    background-color: rgba(0, 250, 0, 0.4);
+    color: #fff;
+    font-size: 10vh;
+    font-family: ;
+}
+p{
+    margin: 0;
 }
