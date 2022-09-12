@@ -1,12 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&family=Kanit:wght@500&display=swap');
 :root{
-    --primary-color: #33F295;
+    --primary-color: #b8e2f8;
     --secundary-color: #43F5DD;
     --tertiary-color: #C5F233;
+    --gradient-one: linear-gradient(to right top, #90ff48, #97fa3d, #9df531, #a3f024, #a8eb12);
+}
+*{
+    scroll-behavior:smooth;
 }
 body{
-    background-image: linear-gradient(to left top, #43f5dd, #2df5cf, #1ef5be, #22f4ab, #33f295); 
+    background-color: #fff;
+    /* background-image: linear-gradient(to left top, #43f5dd, #2df5cf, #1ef5be, #22f4ab, #33f295);  */
     margin: 0;
 }
+p{
+    margin: 0;
+ }
 header{
     background-color: #fff;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
@@ -43,10 +54,11 @@ nav{
     height: 5vh;
     background-color: #C5F233;
     font-size: 2.7vh;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: 'Kanit', sans-serif;
     color: black;
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 nav ul{
     height: 100%;
@@ -79,19 +91,171 @@ main{
     margin: 0;
     padding: 0;
 }
-#main_presentation-img{
+#main_presentation{
     margin: 0;
     background-image: url("../images/photos/presentation-page.jpg");
     background-size: cover;
     height: 83vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-attachment: fixed;
+    box-shadow: 0px -30px 20px 40px rgba(0, 0, 0, 0.2);
+    z-index: -1;
 }
 #main_presentation-text{
-    padding: 20px;
-    background-color: rgba(0, 250, 0, 0.4);
+    width: 60vw;
+    padding: 50px;
+    /*background-color: rgba(0, 250, 0, 0.4);*/
     color: #fff;
-    font-size: 10vh;
-    font-family: ;
+    font-family: 'Fira Sans', sans-serif;
+    z-index: 1;
 }
-p{
+h1{
+    margin: 0px;
+    font-size: 10vh;
+    text-shadow: 0px 4px 2px  black;
+    text-align: left;
+}
+#main_presentation-text p{
+    margin: 10px 0px;
+    font-size: 5vh;
+    text-shadow: 0px 3px 2px  black;
+    text-align: left;
+}
+#main_presentation-football-player{
+    object-fit: contain;
+    height: 80%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    filter: grayscale() contrast(1.4) drop-shadow(40px 5px 0px #000a);
+    
+}
+h2{
+    font-size: 6vh;
+    color:#fff;
+    text-shadow: -.2vh .2vh 0px  black;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 30px 0px;
+    background-image: var(--gradient-one);
+    box-shadow: -5px 5px 0px 6px var(--tertiary-color);
+    padding: 30px;
+    width: max-content;
+    border-radius: 20% 0px 20% 0px;
+}
+#main_about-us{
+    padding: 40px;
+}
+#main_about-us > p{
+    margin: 30px 0px;
+    font-size: 3.2vh;
+    color: #000;
+    font-family: 'Kanit', sans-serif;
+    text-align: center;
+    line-height: 4vh;
+}
+#main-about-us_cards{
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.main_about-us_card-info{
+    margin: 20px 0px;
+    background-image: var(--gradient-one);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: -10px 10px 20px 0px #3332;
+    overflow-x: hidden;
+    border-radius: 20px;
+}
+.main_about-us_card-info > img{
+    width: 100%;
+    height: 40%;
+    object-fit: cover;
+    background-color: #fff;
+    box-shadow: 0px 10px 60px 0px #0003;
+}
+.main_about-us_card-info h3{
+    font-size: 4vh;
+    color:#fff;
+    text-shadow: -.1vh .1vh 0px  black;
+    font-family:'Fira Sans', sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+.main_about-us_card-info div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.main_about-us_card-info > div > img{
+    width: 30%;
+    object-fit: contain;
+    filter: drop-shadow(0px 5px black);
+}
+.main_about-us_card-info >  div > ul{
+    width: 100%;
+    font-size: 4vh;
+    display: block;
+    text-decoration: none;
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+    font-family: 'Kanit', sans-serif;
+}
+.main_about-us_card-info > div li{
+    width: 80%;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    background-position: center;
+    background-size:cover;
+    border-radius: 20px;
+    color: #000;
+    text-shadow: -0.2vh 0.2vh #fff;
+} 
+#main_courts{
+    background-color: var(--primary-color);
+    padding: 3vh 6vh;
+}
+.main_courts_card{
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 20px;
+}
+.main_courts_card-header{
+    width: 100%;
+    height: 10vh;
+    position: relative;
+    overflow: hidden;
+}
+.main_courts_card-header img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(2px);
+    z-index: -1;
+}
+.main_courts_card-header p{
+    position: absolute;
+    width: 100%;
+    font-size: 7vh;
+    z-index: 1;
+    top: 0;
+    text-align: center;
+}
+.main_courts_card-info{
+    padding: 20px;
 }
