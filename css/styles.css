@@ -23,18 +23,17 @@ header{
     background-color: #fff;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
     height: 10vh;
-    padding: 10px;
     display: flex;
     align-items: center;
 }
 #header_logo{
     height: 100%;
+    margin: 0px 1.2vw;
 }
 #header_social-medias{
     height: min-content;
     min-width: 25vw;
-    margin: 0;
-    margin-left: auto;
+    margin: 0 auto;
     padding: 0;
     display: flex;
     align-items: center;
@@ -48,6 +47,36 @@ header{
 }
 #header_social-medias a:visited{
     color: black;
+}
+#header_login-box{
+    height: 100%;
+    width: 18vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(77, 112, 250);
+    margin: 0;
+}
+#header_login-box div{
+    width: 100%;
+    height: 50%;
+}
+#header_login-box div a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2vh;
+    text-decoration: none;
+    transition-property: color background-color;
+    transition-duration: 1s;
+}
+#header_login-box div a:hover{
+    color: #000;
+    background-color: #b8e2f8;
 }
 nav{
     margin: 0;
@@ -381,7 +410,7 @@ aside > p{
 
 footer{
     background-color: var(--primary-color);
-    height: 10vh;
+    height: 20vh;
     padding: 2vw;
     display: flex;
 
@@ -395,7 +424,52 @@ footer > p{
     font-size: 3vh;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0px 3vw;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 footer > div{
     width: 30vw;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+footer > div > p{
+    font-size: 3vh;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+footer > div > ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+footer > div > ul > li{
+    display: inline-block;
+    width: 100%;
+    margin: .4vh 0;
+    font-size: 130%;
+}
+footer > div > ul > li i{
+    float: left;
+    margin: 0 1vw;
+}
+footer a{
+    color: #000;
+    text-decoration: none;
+}
+footer a:visited{
+    color: #000;
+}
+footer a:link{
+    color: #000;
 }
