@@ -1,0 +1,42 @@
+body{
+    background-image: linear-gradient(to right top, #2de765, #5be768, #77e76d, #8ee773, #a0e77a, #a2e980, #a3ea87, #a5ec8d, #98f094, #88f49c, #76f7a6, #5ffbb0);
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+#inscription-form{
+    margin: 4% 10%;
+    display: flex;
+    width: 80vw;
+    border-radius: 4vh;
+    box-shadow: 0px 0px 2vh 1vh #0003;
+    overflow: hidden;
+    background-color: #fff;
+}
+#inscription-form h2{
+    align-self: flex-start;
+}
+#inscription-form form{
+    padding: 4vw;
+    background-color: var(--tertiary-color);
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+#inscription-form form > input{
+    height: 4vh;
+    width: 100%;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 2.4vh;
+    margin: 1vh 0px;
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.2);
+}
+#inscription-form fieldset{
+    border-style: none;
+}
+#inscription-form > img{
+    object-fit: cover;
+    width: 50%;
+}
