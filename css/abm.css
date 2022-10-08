@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+body{
+    background-color: rgb(238, 238, 238);
+}
+header{
+    background-color: rgb(54, 107, 250);
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.1);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-family: 'Anton', sans-serif;
+    color: white;
+    text-shadow: .1em .1em rgb(0, 0, 0);
+}
+main{
+    padding: 2vh;
+}
+.titles{
+    padding: .2em;
+    font-size: 2.5em;
+    font-family: 'Anton', sans-serif;
+}
+.format-table{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(8, minmax(50px, 1fr));
+    border: 2px solid black;
+    margin: 30px 0px;
+    padding: 2px;
+    border-radius: 10px;
+}
+.item-table{
+    width: 50px;
+    width: 100%;
+    text-align: center;
+}
+a{
+    height: min-content;
+    width: min-content;
+    text-align: center;
+    padding: 0;
+    margin: 0px auto;
+    background-color: transparent;
+    border-style: none;
+    font-size: 50px;
+    height: min-content;
+    width: min-content;
+    cursor: pointer;
+}
+.delete{
+    color: red; 
+}
+i{
+    padding: 0;
+    margin: 0;
+}
