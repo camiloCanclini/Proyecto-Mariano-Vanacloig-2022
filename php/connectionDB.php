@@ -3,11 +3,13 @@
 		$servidor="localhost";
 		$usuario="root";
 		$clave="admin";
-		$baseDeDatos="mariano";
+		$baseDeDatos="Mariano";
 		$enlace = new mysqli($servidor, $usuario, $clave, $baseDeDatos);
 		if($enlace -> connect_error ){
 	
 			die("No a sido posible establecer conexión con la bsae de datos");
+		}else{
+			echo "conexion exitosa";
 		}
 		return $enlace;
 	}
@@ -20,4 +22,6 @@
 			}   
 		return $close;
 	}
+	$en = conexionBD();
+	query
 ?>
