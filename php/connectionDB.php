@@ -6,12 +6,11 @@
 		$baseDeDatos="Mariano";
 		$enlace = new mysqli($servidor, $usuario, $clave, $baseDeDatos);
 		if($enlace -> connect_error ){
-	
-			die("No a sido posible establecer conexión con la bsae de datos");
+			die("No a sido posible establecer conexión con la base de datos");
 		}else{
-			echo "conexion exitosa";
+			//echo "conexion exitosa";
+			return $enlace;
 		}
-		return $enlace;
 	}
 	function disconnectDB($enlace){
 		$close = mysqli_close($enlace);
@@ -22,6 +21,5 @@
 			}   
 		return $close;
 	}
-	$en = conexionBD();
-	query
+
 ?>
