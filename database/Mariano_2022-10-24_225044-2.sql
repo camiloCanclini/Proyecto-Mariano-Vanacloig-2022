@@ -36,15 +36,6 @@ CREATE TABLE `canchas` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `canchas`
---
-
-/*!40000 ALTER TABLE `canchas` DISABLE KEYS */;
-INSERT INTO `canchas` VALUES
-(1,'9 de julio 995',1,2);
-/*!40000 ALTER TABLE `canchas` ENABLE KEYS */;
-
---
 -- Table structure for table `clubes`
 --
 
@@ -58,15 +49,6 @@ CREATE TABLE `clubes` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `clubes`
---
-
-/*!40000 ALTER TABLE `clubes` DISABLE KEYS */;
-INSERT INTO `clubes` VALUES
-(1,'Club Atlético 9 de Julio','9dejul@gmail.com');
-/*!40000 ALTER TABLE `clubes` ENABLE KEYS */;
 
 --
 -- Table structure for table `deportes`
@@ -84,15 +66,6 @@ CREATE TABLE `deportes` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `deportes`
---
-
-/*!40000 ALTER TABLE `deportes` DISABLE KEYS */;
-INSERT INTO `deportes` VALUES
-(2,'Basquet',12);
-/*!40000 ALTER TABLE `deportes` ENABLE KEYS */;
-
---
 -- Table structure for table `equipos`
 --
 
@@ -105,16 +78,6 @@ CREATE TABLE `equipos` (
   PRIMARY KEY (`idEquipo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `equipos`
---
-
-/*!40000 ALTER TABLE `equipos` DISABLE KEYS */;
-INSERT INTO `equipos` VALUES
-(1,'La Escaloneta'),
-(2,'Los Tigres');
-/*!40000 ALTER TABLE `equipos` ENABLE KEYS */;
 
 --
 -- Table structure for table `fechas`
@@ -142,16 +105,6 @@ CREATE TABLE `fechas` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `fechas`
---
-
-/*!40000 ALTER TABLE `fechas` DISABLE KEYS */;
-INSERT INTO `fechas` VALUES
-(1,1,'2022-11-14 00:00:00',1,1,'20:00:00','23:00:00'),
-(2,1,'2022-11-25 00:00:00',1,2,'15:00:00','16:30:00');
-/*!40000 ALTER TABLE `fechas` ENABLE KEYS */;
-
---
 -- Table structure for table `tipoUsuarios`
 --
 
@@ -164,17 +117,6 @@ CREATE TABLE `tipoUsuarios` (
   PRIMARY KEY (`idTipo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tipoUsuarios`
---
-
-/*!40000 ALTER TABLE `tipoUsuarios` DISABLE KEYS */;
-INSERT INTO `tipoUsuarios` VALUES
-(1,'Afiliado'),
-(2,'Estudiante'),
-(3,'ADMINISTRADOR');
-/*!40000 ALTER TABLE `tipoUsuarios` ENABLE KEYS */;
 
 --
 -- Table structure for table `usuarios`
@@ -198,15 +140,6 @@ CREATE TABLE `usuarios` (
   CONSTRAINT `usuarios_ibfk_1` FOREIGN KEY (`fk_tipo_usuario`) REFERENCES `tipoUsuarios` (`idTipo`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `usuarios`
---
-
-/*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES
-(1,'admin','admin','admin','admin',3,NULL);
-/*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -217,4 +150,4 @@ INSERT INTO `usuarios` VALUES
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-24 22:50:39
+-- Dump completed on 2022-10-24 22:50:59

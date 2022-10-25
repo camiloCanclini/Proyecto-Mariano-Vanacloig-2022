@@ -1,11 +1,11 @@
 <?php
 	function conexionBD(){
-		$servidor="localhost";
+		$servidor="127.0.0.1:3306";
 		$usuario="root";
 		$clave="admin";
 		$baseDeDatos="Mariano";
 		$enlace = new mysqli($servidor, $usuario, $clave, $baseDeDatos);
-		if($enlace -> connect_error ){
+		if($enlace -> connect_error){
 			die("No a sido posible establecer conexión con la base de datos");
 		}else{
 			//echo "conexion exitosa";
