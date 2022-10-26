@@ -1,5 +1,4 @@
 console.log('Script Funcionando');
-console.log('Holaaa');
 (function sendRequest(){
 	const httpRequest = new XMLHttpRequest();//Se crea objeto para peticiones-consultas
 	httpRequest.open('GET', '../php/queryFechas.php', true);//Se hace la consulta al archivo php
@@ -31,9 +30,11 @@ console.log('Holaaa');
 				//<==Seteo Elementos Fijos==>
 				divContainer.classList.add("format-table");
 				botonEditar.classList.add("edit");
+				botonEditar.href = "editAbm.html?id="+i[0];
 				botonEditarIco.classList.add("fas");
 				botonEditarIco.classList.add("fa-edit");
 				botonEliminar.classList.add("delete");
+				botonEliminar.setAttribute("onclick","borrarFecha("+i[0]+");");
 				botonEliminarIco.classList.add("fa-solid");
 				botonEliminarIco.classList.add("fa-square-minus");
 				//botonEditar.addEventListener()
@@ -64,3 +65,4 @@ console.log('Holaaa');
 	}
 	httpRequest.send();
 })();
+

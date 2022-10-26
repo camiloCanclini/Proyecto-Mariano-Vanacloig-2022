@@ -13,13 +13,35 @@
         <span>ADMINISTRACIÓN</span>
     </header>
     <main>
-    <form action="" method="post">
-        <input type="text">
-        <input type="text">
-        <input type="text">
-        <input type="date">
-        <input type="number" name="" id="">
-    </form>
+        <h2 class="titles2">INGRESO DE DATOS</h2>
+        <form action="../php/updateAbm.php" method="POST" id="form">
+            <div>
+                <label for="equipo">Equipo 1</label>
+                <input id="equipo1" name="equipo1" type="number" value="">
+            </div>
+            <div>
+                <label for="equipo">Equipo 2</label>
+                <input id="equipo2" name="equipo2" type="number" value="">
+            </div>
+            <div>
+                <label for="cancha">Nombre Cancha</label>
+                <input id="cancha" name="cancha" type="number" value="">
+            </div>
+            <div>
+                <label for="fecha">Fecha</label>
+                <input id="fecha" name="fecha" type="date" value="">
+            </div>
+            <div>
+                <label for="desde">Desde</label>
+                <input id="desde" name="desde" type="time" value="">
+            </div>
+            <div>
+                <label for="hasta">Hasta</label>
+                <input id="hasta" name="hasta" type="time" value="">
+            </div>
+            <input type="submit" name="actualizar" value="ACTUALIZAR INFORMACIÓN">
+        </form>
     </main>
 </body>
+<script src="../js/editAbm.js"></script>
 </html>

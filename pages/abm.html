@@ -14,7 +14,7 @@
     <main>
         <h1 class="titles">ABM DE LA TABLA FECHAS</h1>
         <h2 class="titles2">INGRESO DE DATOS</h2>
-        <form action="../php/uploadEncounter.php" method="POST">
+        <form action="../php/createFecha.php" method="POST">
             <div>
                 <label for="equipo">Equipo 1</label>
                 <input id="equipo1" name="equipo1" type="text">
@@ -44,10 +44,10 @@
         <h2 class="titles2">DATOS CARGADOS - MODIFICACIÓN - ELIMINACIÓN</h2>
     <div class="format-table">
             <div>ID</div>
+            <div>Direccion Cancha</div>
+            <div>Fecha</div>
             <div>Equipo 1</div>
             <div>Equipo 2</div>
-            <div>Nombre Cancha</div>
-            <div>Fecha</div>
             <div>Desde</div>
             <div>Hasta</div>
             <div>Editar</div>
@@ -71,6 +71,7 @@
     </div>
     </main>
     <script src="../js/queryFechas.js"></script>
+    <script src="../js/deleteAbm.js"></script>
 </body>
 
 </html>

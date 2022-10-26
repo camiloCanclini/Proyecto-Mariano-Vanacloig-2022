@@ -14,21 +14,19 @@
         $hasta = $_POST['hasta'];
         //echo $_POST['desde'];
 
-        $query = "INSERT INTO `fechas`(`fk_idCancha`,`fecha`, `fk_idEquipo 1`, `fk_idEquipo2`, `desde_hs`, `hasta_hs`) VALUES ('$cancha','2022-10-13', '1', '2', '23:55', '22:30');";
+        $query = "INSERT INTO `fechas`(`fk_idCancha`,`fecha`, `fk_idEquipo1`, `fk_idEquipo2`, `desde_hs`, `hasta_hs`) VALUES ('$cancha','$fecha', '$equipo1', '$equipo2', '$desde', '$hasta');";
         //echo $query;
         
         $result = mysqli_query($enlace, $query);
-        /*
+
         if(!$result) {
            
             die("Query Failed.");
         }
-        
-        echo $query;
         //$_SESSION['message'] = 'Task Saved Successfully';
         //$_SESSION['message_type'] = 'success';
-        //header('Location: ../pages/abm.html');
-*/
+        header('Location: ../pages/abm.html');
+
     }
     
 ?>
