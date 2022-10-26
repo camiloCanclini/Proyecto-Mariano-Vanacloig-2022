@@ -1,6 +1,6 @@
 <?php
 	function conexionBD(){
-		$servidor="127.0.0.1:3306";
+		$servidor="127.0.0.1";
 		$usuario="root";
 		$clave="admin";
 		$baseDeDatos="Mariano";
