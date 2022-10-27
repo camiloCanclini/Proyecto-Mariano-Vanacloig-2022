@@ -32,7 +32,7 @@ CREATE TABLE `canchas` (
   KEY `tipoCancha` (`fk_tipoCancha`),
   CONSTRAINT `canchas_ibfk_1` FOREIGN KEY (`fk_idClubProp`) REFERENCES `clubes` (`id`),
   CONSTRAINT `tipoCancha` FOREIGN KEY (`fk_tipoCancha`) REFERENCES `deportes` (`idDeporte`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,7 +47,7 @@ CREATE TABLE `clubes` (
   `nombreClub` varchar(255) NOT NULL,
   `email` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +62,7 @@ CREATE TABLE `deportes` (
   `nombreDeporte` varchar(255) NOT NULL,
   `jugadoresPorEquipos` int(2) NOT NULL,
   PRIMARY KEY (`idDeporte`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -76,7 +76,7 @@ CREATE TABLE `equipos` (
   `idEquipo` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `nombreEquipo` varchar(255) NOT NULL,
   PRIMARY KEY (`idEquipo`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -88,20 +88,20 @@ DROP TABLE IF EXISTS `fechas`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `fechas` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
+  `fk_idEquipo1` int(11) DEFAULT NULL,
+  `fk_idEquipo2` int(11) NOT NULL,
   `fk_idCancha` int(11) DEFAULT NULL,
   `fecha` datetime DEFAULT NULL,
-  `fk_idEquipo 1` int(11) NOT NULL,
-  `fk_idEquipo2` int(11) NOT NULL,
   `desde_hs` time NOT NULL,
   `hasta_hs` time NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `equipo1_fk` (`fk_idEquipo 1`),
+  KEY `equipo1_fk` (`fk_idEquipo1`),
   KEY `index4` (`fk_idEquipo2`),
   KEY `fechas_ibfk_1` (`fk_idCancha`),
   CONSTRAINT `fechas_ibfk_1` FOREIGN KEY (`fk_idCancha`) REFERENCES `canchas` (`idCancha`),
-  CONSTRAINT `fk_equipo1` FOREIGN KEY (`fk_idEquipo 1`) REFERENCES `equipos` (`idEquipo`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_equipo1` FOREIGN KEY (`fk_idEquipo1`) REFERENCES `equipos` (`idEquipo`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `fk_equipo2` FOREIGN KEY (`fk_idEquipo2`) REFERENCES `equipos` (`idEquipo`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -129,7 +129,7 @@ CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Primary Key',
   `nombre` varchar(255) NOT NULL,
   `apellido` varchar(255) NOT NULL,
-  `mail` varchar(255) NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
   `fk_tipo_usuario` int(11) DEFAULT NULL,
   `fk_id_equipo` int(11) DEFAULT NULL,
@@ -150,4 +150,4 @@ CREATE TABLE `usuarios` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-24 22:50:59
+-- Dump completed on 2022-10-26 23:06:37
