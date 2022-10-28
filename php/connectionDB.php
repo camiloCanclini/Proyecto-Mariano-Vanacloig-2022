@@ -1,8 +1,8 @@
 <?php
 	function conexionBD(){
-		$servidor="127.0.0.1";
+		$servidor="localhost";
 		$usuario="root";
-		$clave="admin";
+		$clave="";
 		$baseDeDatos="Mariano";
 		$enlace = new mysqli($servidor, $usuario, $clave, $baseDeDatos);
 		if($enlace -> connect_error){
