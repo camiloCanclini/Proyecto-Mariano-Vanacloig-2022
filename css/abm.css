@@ -137,3 +137,7 @@ i{
     font-size: 1.5rem;
     flex-grow: 1;
 }
+#query1Container{
+    display: flex;
+    flex-direction: column;
+}
