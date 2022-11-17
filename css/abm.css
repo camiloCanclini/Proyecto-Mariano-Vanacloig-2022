@@ -105,3 +105,35 @@ i{
     padding: 0;
     margin: 0;
 }
+
+/* <-- Extra Querys --> */
+
+#query1>div, #query2>div{
+    margin: 10px 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#query1 button, #query2 button{
+    height: 5vh;
+    width: 20%;
+    background-color: rgb(68, 150, 243);
+    cursor: pointer;
+    border: none;
+    border-radius: 1rem;
+    margin-left: 10px;
+    justify-content: end;
+}
+#query1 label, #query2 label{
+    width: 20%;
+    font-size: 1.4rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#query1 input, #query2 input{
+    height: 5vh;
+    width: 40%;
+    margin-left: 10px;
+    font-size: 1.5rem;
+    flex-grow: 1;
+}

@@ -12,8 +12,33 @@
         <span>ADMINISTRACIÓN</span>
     </header>
     <main>
+        <h1 class="titles">Consultas</h1>
+        <h2 class="titles2">Consultar Fechas de Equipo</h2>
+        <div id="query1">
+            <div>
+                <label for="idEquipo">Id del equipo</label>
+                <input name="idEquipo" type="number" id="valueQuery1">
+                <button onclick="sendRequestQuery1()">Consultar</button>
+            </div>
+            <h2 class="titles2" hidden="" id="resultadoQuery1">Resultado de la consulta:</h2>
+            <div id="query1Container">
+                <!--Resultados de la consulta -->
+            </div>
+        </div>
+        <div id="query2">
+            <div>
+                <label for="fecha">Fecha</label>
+                <input name="fecha" type="date" id="valueQuery2">
+                <button onclick="sendRequestQuery2()">Consultar</button>
+            </div>
+            <h2 class="titles2" hidden="" id="resultadoQuery2">Resultado de la consulta:</h2>
+            <div id="query2Container">
+                <!--Resultados de la consulta-->
+            </div>
+        </div>
         <h1 class="titles">ABM DE LA TABLA FECHAS</h1>
         <h2 class="titles2">INGRESO DE DATOS</h2>
+        
         <form action="../php/createFecha.php" method="POST">
             <div>
                 <label for="equipo">Equipo 1</label>
@@ -69,8 +94,10 @@
             <a class="delete"><i class="fa-solid fa-square-minus"></i></a>
         </div>
     </div>
+    
     </main>
     <script src="../js/queryFechas.js"></script>
+    <script src="../js/extraQuerys.js"></script>
     <script src="../js/deleteAbm.js"></script>
 </body>
 
